@@ -33,7 +33,7 @@ body {
   top: 0%;
   z-index: -1;
   background-size: contain;
-  position:absolute;
+  position: absolute;
 }
 .scrolling-active .active::before {
   background: url(../Assets/Path\ 856.png) no-repeat;
@@ -50,9 +50,11 @@ body {
 }
 .nice-select:after {
   border-bottom: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
 }
-.nice-select:active, .nice-select.open, .nice-select:focus {
+.nice-select:active,
+.nice-select.open,
+.nice-select:focus {
   color: #212529;
   background-color: transparent;
   border-color: transparent;
@@ -348,18 +350,18 @@ option {
 }
 .first-row {
   display: flex;
-    width: 100%;
-    align-items: center;
-    margin-bottom: 4%;
-    flex-direction: row;
-    justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 4%;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .second-row {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-evenly
+  justify-content: space-evenly;
 }
 .landscape {
   width: 160px;
@@ -592,11 +594,6 @@ footer {
     font-size: 17px;
     padding-left: 42%;
   }
-  /* #navbarNav {
-    display: flex !important;
-    flex-basis: auto;
-    justify-content: flex-end;
-  } */
 }
 @media only screen and (max-width: 700px) {
   .menu-btn {
@@ -617,7 +614,7 @@ footer {
   .scrolling-active {
     display: none;
   }
-    .menu-btn-burger::before {
+  .menu-btn-burger::before {
     content: "";
     width: 40px;
     height: 3px;
@@ -627,7 +624,7 @@ footer {
     box-shadow: 0 2px 5px rgb(255 101 47 / 20%);
     transform: translateY(-9px);
   }
-    .menu-btn-burger::after {
+  .menu-btn-burger::after {
     content: "";
     width: 30px;
     height: 3px;
@@ -705,8 +702,9 @@ footer {
     text-align: center;
   }
   .maven-btn {
-    width: 40%;
-    left: 30%;
+    padding-top: 45%;
+    left: 24%;
+    width: 50%;
   }
   .coral {
     z-index: 3;
@@ -820,6 +818,7 @@ footer {
   }
   .contact-img {
     margin-top: 12%;
+    padding-bottom: 10%;
   }
   .sun-rays {
     width: 315px;
@@ -868,9 +867,8 @@ footer {
     width: 33px;
     cursor: pointer;
   }
-  .menu-btn {
-    z-index: 3;
-    margin-left: 45%;
+  .menu-button {
+    padding-bottom: 5%;
   }
   .close-btn {
     position: absolute;
@@ -895,7 +893,7 @@ footer {
     display: flex !important;
     margin-right: 30%;
   }
-  .menu-active nav{
+  .menu-active nav {
     background-color: #2ed9c3;
     height: 100%;
   }
@@ -915,7 +913,7 @@ footer {
     display: block;
     position: absolute;
     top: -4%;
-    left: -7%
+    left: -7%;
   }
   .menu-active nav .navbar-nav #menuList {
     display: flex;
