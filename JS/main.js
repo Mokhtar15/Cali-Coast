@@ -20,6 +20,10 @@ let nav = document.querySelector("nav");
                 scrollTop: $("." + $(this).data("scroll")).offset().top - $(".navbar").innerHeight() / divide
             },10)
         })
+
+        $('select').niceSelect();
+
+        $("#loading").fadeOut(2000);
     })
 
 
@@ -45,9 +49,6 @@ $(document).on('click', '.link', function(){
 })
 
 
-$(document).ready(function() {
-    $('select').niceSelect();
-  });
     
 
 
@@ -73,8 +74,4 @@ $(window).scroll(function(){
 
 
 
-$(window).on("load",function(){
-    $("#loading").fadeOut(2000);
-
-})
 
