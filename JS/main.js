@@ -65,8 +65,16 @@ $(window).scroll(function(){
         if (sectionOffset <= scrollbarLocation)
         {
             $(this).parent().addClass('active');
-            $(this).parent().siblings().removeClass('active')
+            $(this).parent().siblings().removeClass('active');
         }
     })
 
 })
+
+
+
+$(window).on("load",function(){
+    $("#loading").fadeOut(2000);
+
+})
+

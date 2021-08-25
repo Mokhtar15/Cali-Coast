@@ -2,6 +2,33 @@ html,
 body {
   overflow-x: hidden;
 }
+#loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999999;
+  animation-name: change-color;
+  animation-duration: 3s;
+}
+#loading img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+@keyframes change-color {
+  0% {
+    background-color: #2ed9c3;
+  }
+  50% {
+    background-color: #ff6b00;
+  }
+  100% {
+    background-color: #ffd100;
+  }
+}
+
 .banner-color {
   background-color: #2ed9c3;
   min-height: 100vh;
@@ -24,8 +51,7 @@ body {
   width: 3%;
   height: 60%;
 }
-
-.active::before {
+.link::before {
   content: "";
   background: url(../Assets/Path\ 26.png) no-repeat;
   width: 100%;
@@ -34,11 +60,16 @@ body {
   z-index: -1;
   background-size: contain;
   position: absolute;
+  opacity: 0;
+  transition: 200ms;
 }
-.scrolling-active .active::before {
+.scrolling-active .link::before {
   background: url(../Assets/Path\ 856.png) no-repeat;
   background-size: contain;
   top: 0%;
+}
+.active::before {
+  opacity: 1;
 }
 .nav-item {
   z-index: 2;
@@ -57,9 +88,8 @@ body {
 .nice-select:focus {
   color: #212529;
   background-color: transparent;
-  border-color: transparent;
+  border-color: transparent transparent #ffffff transparent;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem #ffffff70;
 }
 .current {
   color: #ffffff;
@@ -156,11 +186,40 @@ form {
   margin-left: 7%;
 }
 .form-control:focus {
-  color: #212529;
+  color: #ffffff;
   background-color: transparent;
-  border-color: transparent;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem #ffffff70;
+  border-color: transparent transparent #ffffff21 transparent;
+  box-shadow: 0 0 0 0.25rem transparent;
+}
+.form-floating::before {
+  content: "";
+  width: 0%;
+  height: 4%;
+  bottom: 0%;
+  position: absolute;
+  background-color: #ffffff;
+  transition: 1s;
+}
+.form-floating:focus-within::before {
+  width: 100%;
+}
+.form-floating > label {
+  font-weight: bold;
+}
+.current {
+  display: none;
+}
+.open .current {
+  top: -25%;
+  position: absolute;
+  display: block;
+  color: #ffffff;
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  opacity: 1;
 }
 .form-select:focus {
   border-color: transparent;
@@ -208,8 +267,7 @@ option {
 .title {
   position: absolute;
   top: 29%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 12%;
   text-align: center;
   width: 60%;
   z-index: 2;
@@ -350,48 +408,18 @@ option {
 }
 .first-row {
   display: flex;
-  width: 100%;
-  align-items: center;
-  margin-bottom: 4%;
   flex-direction: row;
-  justify-content: space-around;
-}
-.second-row {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
 }
-.landscape {
-  width: 160px;
+.first-row div {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
 }
-.roadbotics {
-  width: 160px;
-}
-.sog {
-  width: 80px;
-}
-.vodafone {
-  width: 160px;
-}
-.ae7 {
-  width: 90px;
-}
-.aqua {
-  width: 120px;
-}
-.axa {
-  width: 75px;
-}
-.auc {
-  width: 170px;
-}
-.borolossy {
-  width: 150px;
-}
-.flow {
-  width: 150px;
+.icons {
+  width: 85%;
 }
 .dream {
   position: absolute;
@@ -535,35 +563,13 @@ footer {
   .partners p {
     font-size: 55px;
   }
-  .landscape {
-    width: 200px;
+  .first-row div {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
   }
-  .roadbotics {
-    width: 200px;
-  }
-  .sog {
-    width: 120px;
-  }
-  .vodafone {
-    width: 200px;
-  }
-  .ae7 {
-    width: 130px;
-  }
-  .aqua {
-    width: 160px;
-  }
-  .axa {
-    width: 115px;
-  }
-  .auc {
-    width: 210px;
-  }
-  .borolossy {
-    width: 190px;
-  }
-  .flow {
-    width: 190px;
+  .icons {
+    width: 100%;
   }
   .contact {
     padding-top: 6%;
@@ -747,58 +753,13 @@ footer {
     flex-direction: column;
     margin-top: 5%;
   }
-  .first-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
   .first-row div {
-    margin-bottom: 12%;
-    margin-right: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 4%;
   }
-  .second-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .second-row div {
-    margin-bottom: 12%;
-    margin-right: 4%;
-  }
-  .landscape {
-    width: 140px;
-  }
-  .roadbotics {
-    width: 140px;
-  }
-  .sog {
-    width: 60px;
-  }
-  .vodafone {
-    width: 130px;
-  }
-  .ae7 {
-    width: 60px;
-  }
-  .aqua {
+  .icons {
     width: 90px;
-    margin-bottom: 10%;
-  }
-  .axa {
-    width: 50px;
-    margin-bottom: 10%;
-  }
-  .auc {
-    width: 110px;
-    margin-bottom: 6%;
-  }
-  .borolossy {
-    width: 130px;
-  }
-  .flow {
-    width: 130px;
   }
   .dream {
     bottom: -1%;
