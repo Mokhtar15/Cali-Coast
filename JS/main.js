@@ -73,5 +73,24 @@ $(window).scroll(function(){
 })
 
 
+// section three
+
+var menu = ['Standalone Villa', 'Twin House', 'Chalet', 'Lofts', 'Studios']
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    slideToClickedSlide: true,
+    pagination: {
+        el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (menu[index]) + '</span>';
+            },
+    },
+});
+
+
+// section three
 
 
