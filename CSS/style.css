@@ -1463,3 +1463,72 @@ footer {
     font-size: 30px;
   }
 }
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .banner-color {
+    min-height: 55vh;
+  }
+  .title-bg {
+    top: 18%;
+  }
+  .intro-content {
+    padding-top: 20%;
+  }
+  .intro-img {
+    width: 425px;
+  }
+  .inqury {
+    left: -35%;
+  }
+  .bg-color {
+    min-height: 55vh;
+  }
+  .seaside img {
+    height: 45vh;
+  }
+  #maven {
+    top: 15%;
+  }
+  .maven-btn {
+    left: 0%;
+    width: 20%;
+  }
+  .coral img {
+    width: 350px;
+  }
+  .first-fish {
+    bottom: 13%;
+  }
+  .second-fish {
+    bottom: 8%;
+  }
+  .Units {
+    min-height: 55vh;
+  }
+  .orange-palm img {
+    height: 350px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    padding-top: 7%;
+  }
+  .swiper {
+    margin-top: -5%;
+  }
+  .th-bg-color {
+    min-height: 35vh;
+  }
+  .contact-info {
+    min-height: 20vh;
+  }
+  footer {
+    min-height: 5vh;
+  }
+  .inquiry-now {
+    top: -40%;
+  }
+  .copy-right {
+    padding-top: 2.5%;
+  }
+}
